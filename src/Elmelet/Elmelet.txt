@@ -1,0 +1,63 @@
+A választható feladatok közül mindkettőt megcsináltam.
+
+Elmélet / 1
+
+Az Exception ellenőrzött hiba, amivel már a program írásakor is
+számolni lehet, try - cath - finally ággal kezelhető, ha nem kezeljük,
+a program fordítása sem fut le.
+RuntimeException a program futásakor létrejövő hiba, kezelhető, de
+nem feltétlenül kell, a futás során bekért értékek esetleges hibája
+miatt
+
+
+Elmélet / 2
+
+Iterátor segítségével.
+
+List<Integer> tempArr = new ArrayList<>();
+        tempArr.add(1);
+        tempArr.add(2);
+        tempArr.add(3);
+        tempArr.add(4);
+        tempArr.add(5);
+        ListIterator<Integer> temp = tempArr.listIterator();
+        while (temp.hasNext()) {
+            if (temp.next().equals(3)){
+                temp.remove();
+            }
+        }
+
+
+Elmélet / 3
+
+- Öröklődés: AnyaOsztály -> GyerekOsztály kapcsolat,
+öröklheti a public/protected fild-jeit, konstruktorait, metódusait,
+használhatja, felülírhatja őket. Minden osztály az Object osztályból
+származik.
+
+- Polimorfizmus / többalakúság: több metódusnak ugyan az a neve, de
+mást csinálnak.
+    Overriding -> a metódust felülírja a gyerek osztály, a bemenet
+        és kimenet változatlan marad
+    Overloading -> a metódusnak ugyan az a neve, de mások a bemeneti
+        paraméterei
+
+- Absztrakció: absztrakt osztályokkal és interfészekkel alkalmazható,
+    a leszármaztatott osztálynak egy "tervet" lehet készíteni, a
+    metódusok feje megadja a megvalósítandó opciókat, feladatokat.
+
+- enkapszuláció: az osztályok saját metódusai, fildjei elérhetetlenek,
+    vagy csak külön metóduokkal hívhatóak meg (getterek / setterek),
+    a kéretlen módosítások elkerülése miatt.
+
+- asszociáció: az objektumok közötti kapcsolatot adja meg.
+
+- aggregáció: egy különálló objektum egy másik különálló objektumhoz
+ tartozik.
+
+
+Elmélet / 4
+
+A comparator segítségével és a compareTo metódussal, lehetne megoldani.
+extend kulcsszó és @Override
+
